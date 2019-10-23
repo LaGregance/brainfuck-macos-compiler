@@ -14,7 +14,7 @@ You can learn more about brainfuck by following this link : https://en.wikipedia
 ## How it's work
 1. BFC read your source file and write a temporary assembly file
 2. Next, it call nasm to make object file
-3. Finnaly, it call ld to link the object in an executable file
+3. Finally, it call ld to link the object in an executable file
 
 ## Limitations
 The instruction ```,``` (to get a char from stdin) isn't implemented yet and will be see as comment
