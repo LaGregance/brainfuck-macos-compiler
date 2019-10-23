@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 14:59:27 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/23 18:10:49 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/23 21:19:08 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ static int	open_files(t_bf *bf)
 {
 	if ((bf->source_fd = open(bf->source_file, O_RDONLY)) <= 0)
 		return (ERROR_OPEN_SRC);
-	//if ((bf->output_fd = open(bf->output_file, O_WRONLY | O_CREAT | O_TRUNC, 0666)) <= 0)
-	//	return (ERROR_OPEN_OUTPUT);
 	if ((bf->asm_fd = open(ASM_TMP_FILE, O_WRONLY | O_CREAT | O_TRUNC, 0666)) <= 0)
 		return (ERROR_OPEN_TMPASM);
 	return (SUCCESS);

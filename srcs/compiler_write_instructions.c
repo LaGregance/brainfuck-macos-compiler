@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:02:31 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/23 18:43:56 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/23 21:41:45 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  */
 int		compiler_write_inc_ptr(t_bf *bf)
 {
-	dprintf(bf->asm_fd, "\tinc r12\n");
+	dprintf(bf->asm_fd, "\tadd r12, %d\n", bf->stack_number);
 	return (SUCCESS);
 }
 
@@ -28,7 +28,7 @@ int		compiler_write_inc_ptr(t_bf *bf)
  */
 int		compiler_write_dec_ptr(t_bf *bf)
 {
-	dprintf(bf->asm_fd, "\tdec r12\n");
+	dprintf(bf->asm_fd, "\tsub r12, %d\n", bf->stack_number);
 	return (SUCCESS);
 }
 
@@ -38,7 +38,7 @@ int		compiler_write_dec_ptr(t_bf *bf)
  */
 int		compiler_write_inc_value(t_bf *bf)
 {
-	dprintf(bf->asm_fd, "\tinc byte[r12]\n");
+	dprintf(bf->asm_fd, "\tadd byte[r12], %d\n", bf->stack_number);
 	return (SUCCESS);
 }
 
@@ -48,7 +48,7 @@ int		compiler_write_inc_value(t_bf *bf)
  */
 int		compiler_write_dec_value(t_bf *bf)
 {
-	dprintf(bf->asm_fd, "\tdec byte[r12]\n");
+	dprintf(bf->asm_fd, "\tsub byte[r12], %d\n", bf->stack_number);
 	return (SUCCESS);
 }
 

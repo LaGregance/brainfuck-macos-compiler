@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 14:38:02 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/23 18:43:08 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/23 21:22:18 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ typedef struct	s_bf
 
 	int		current_loop;
 	int		current_char;
+
+	char	stack_instruction;
+	int		stack_number;
 }				t_bf;
 
 typedef struct	s_fct_dispatch
