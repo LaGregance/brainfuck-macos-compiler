@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 14:59:46 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/23 21:51:45 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/23 21:54:12 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ int		is_stackable(char c)
 }
 
 /**
+ * Flush stackable instruction if need
  * 
+ * @return SUCCESS or error code
  */
 int		flush_stackable(t_bf *bf)
 {
